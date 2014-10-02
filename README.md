@@ -18,8 +18,7 @@ GET - **Get Resource** *(aid: ```Integer```)*
 Examples:
 
 ```shell
-curl --header "token: YOUR TOKEN HERE" -X GET -d '{resource: {"aid" : USER ID HERE}}' \
-  http://app.gioco.pro/api/get_resource.json
+curl --header "token: YOUR TOKEN HERE" -X GET -d resource="{aid:USER ID HERE}" \ https://app.gioco.pro/api/get_resource.json
 ```
 
 ## Events
@@ -33,6 +32,5 @@ POST - **Track Event** *(name: ```String```, aid: ```Integer```)*
 Examples:
 
 ```shell
-curl --header "token: YOUR TOKEN HERE" -X POST -d '{"event":{"name" : "EVENT NAME HERE"}, resource: {"aid" :  USER ID HERE}}' \
-  http://app.gioco.pro/api/track_event.json
+curl --header "token: YOUR TOKEN HERE" -X POST -d 'event={name:"EVENT NAME HERE"}' -d 'resource={aid:USER ID HERE}' \ http://app.gioco.pro/api/track_event.json
 ```
