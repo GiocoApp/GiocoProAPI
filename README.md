@@ -34,3 +34,17 @@ Examples:
 ```shell
 curl --header "token: YOUR TOKEN HERE" -X POST -d 'event={name:"EVENT NAME HERE"}' -d 'resource={aid:USER ID HERE}' \ http://app.gioco.pro/api/track_event.json
 ```
+
+## Ranking
+
+### Retrieve Ranking
+Get - **Retrieve Ranking** *(size: ```Integer```, batch: ```Integer```)*
+
+- **size** (the max number is 100) parameter is the number of resources that will be returned per batch.
+- **batch** is the batch of the ranking you want to return, it is intended to paginate the ranking.
+
+Examples:
+
+```shell
+curl --header "token: YOUR TOKEN HERE" -X GET -d size="SIZE HERE" -d batch="BATCH HERE" https://app.gioco.pro/api/ranking/retrieve.json
+```
